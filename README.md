@@ -1,9 +1,9 @@
 /interface vlan
 add name=vlan10 vlan-id=10 
-interface=ether1
+interface=ether2
 
 /interface vlan
-add name=vlan20 vlan-id=20 interface=ether1
+add name=vlan20 vlan-id=20 interface=ether2
 
 /ip address
 add address=192.168.10.1/24 interface=vlan10
