@@ -11,6 +11,9 @@ add address=192.168.10.1/24 interface=VLAN10
 /ip address
 add address=192.168.20.1/24 interface=VLAN20
 
+/ip address
+add address=192.168.30.1/24 interface=ether3
+
 /ip dhcp-server
 add name=dhcp_VLAN10 interface=VLAN10 
 address-pool=dhcp_pool_vlan10 disabled=no
