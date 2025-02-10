@@ -14,6 +14,12 @@ add address=192.168.20.1/24 interface=vlan20
 /ip hotspot setup
 set interface=wlan1 address=192.168.50.1/24 dns-name=faisal.net dns-server=8.8.8.8,8.8.4.4 name=hotspot1
 
+/interface wireless
+set wlan1 mode=ap-bridge ssid=makan disabled=no
+
+/ip hotspot
+setup interface=wlan1
+
 /ip hotspot user profile
 add name=kepalasekolah rate-limit=512k/512k
 
@@ -32,3 +38,6 @@ add name=guru password=12345 profile=guru
 
 /ip hotspot user
 add name=siswa password=12345 profile=siswa
+
+/system clock
+set time-zone-name=Asia/Jakarta
