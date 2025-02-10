@@ -6,10 +6,17 @@ interface=ether2
 add name=VLAN20 vlan-id=20 interface=ether2
 
 /ip address
-add address=192.168.10.1/24 interface=vlan10
+add address=192.168.10.1/24 interface=VLAN10
 
 /ip address
-add address=192.168.20.1/24 interface=vlan20
+add address=192.168.20.1/24 interface=VLAN20
+
+/ip dhcp-server
+add name=dhcp_VLAN10 interface=VLAN10 
+address-pool=dhcp_pool_vlan10 disabled=no
+
+/ip dhcp-server
+add name=dhcp_VLAN20 interface=VLAN20 address-pool=dhcp_pool_vlan20 disabled=no
 
 /ip hotspot setup
 set interface=wlan1 address=192.168.50.1/24 dns-name=faisal.net dns-server=8.8.8.8,8.8.4.4 name=hotspot1
