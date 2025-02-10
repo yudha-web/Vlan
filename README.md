@@ -13,7 +13,7 @@ add address=192.168.10.1/24 interface=VLAN10
 add address=192.168.20.1/24 interface=VLAN20
 
 /ip address
-add address=192.168.50.1/24 interface=wlan1
+add address=192.168.40.1/24 interface=wlan1
 
 /interface wireless
 set wlan1 mode=ap-bridge ssid=makan disabled=no
@@ -37,13 +37,7 @@ add address=192.168.10.0/24 gateway=192.168.10.1 dns-server=8.8.8.8
 add address=192.168.20.0/24 gateway=192.168.20.1 dns-server=8.8.8.8
 
 /ip pool
-add name=hotspot_pool ranges=192.168.50.2-192.168.50.254
-
-/ip dhcp-server
-add name=hotspot_dhcp interface=wlan1 address-pool=hotspot_pool disabled=no
-
-/ip dhcp-server network
-add address=192.168.40.0/24 gateway=192.168.40.1 dns-server=8.8.8.8,8.8.4.4
+add name=hotspot_pool ranges=192.168.40.2-192.168.40.254
 
 /ip hotspot
 add name=hotspot1 interface=wlan1 address-pool=hotspot_pool profile=default
