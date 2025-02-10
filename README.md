@@ -25,7 +25,7 @@ address-pool=dhcp_pool_vlan10 disabled=no
 add name=dhcp_VLAN20 interface=VLAN20 address-pool=dhcp_pool_vlan20 disabled=no
 
 /ip hotspot setup
-set interface=wlan1 address=192.168.50.1/24 dns-name=faisal.net dns-server=8.8.8.8,8.8.4.4 name=hotspot1
+set interface=wlan1 address=192.168.40.1/24 dns-name=faisal.net dns-server=8.8.8.8,8.8.4.4 name=hotspot1
 
 /interface wireless
 set wlan1 mode=ap-bridge ssid=makan disabled=no
