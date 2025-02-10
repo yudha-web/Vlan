@@ -19,10 +19,10 @@ add address=192.168.40.1/24 interface=wlan1
 set wlan1 mode=ap-bridge ssid=makan disabled=no
 
 /ip pool
-add name=dhcp_pool_vlan10 ranges=192.168.10.100-192.168.10.254
+add name=dhcp_pool_vlan10 ranges=192.168.10.2-192.168.10.254
 
 /ip pool
-add name=dhcp_pool_vlan20 ranges=192.168.20.100-192.168.20.254
+add name=dhcp_pool_vlan20 ranges=192.168.20.2-192.168.20.254
 
 /ip dhcp-server
 add name=dhcp_VLAN10 interface=VLAN10 address-pool=dhcp_pool_vlan10 disabled=no
