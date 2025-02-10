@@ -43,14 +43,14 @@ add name=guru rate-limit=256k/256k
 add name=siswa rate-limit=128k/128k
 
 /ip hotspot user
-add name=kepalasekolah password=12345
+add name=kepalasekolah password=123
 profile=kepalasekolah
 
 /ip hotspot user
-add name=guru password=12345 profile=guru
+add name=guru password=456 profile=guru
 
 /ip hotspot user
-add name=siswa password=12345 profile=siswa
+add name=siswa password=789 profile=siswa
 
 /system clock
 set time-zone-name=Asia/Jakarta
