@@ -27,6 +27,9 @@ set wlan1 mode=ap-bridge ssid=makan disabled=no
 /ip hotspot
 setup interface=wlan1
 
+/ip hotspot profile
+set [find] login-by=http-chap,http-pap
+
 /ip hotspot user profile
 add name=kepalasekolah rate-limit=512k/512k
 
