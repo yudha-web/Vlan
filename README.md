@@ -1,5 +1,11 @@
 /system clock set time-zone-name=Asia/Jakarta
 
+/system identity
+set name=UKK-YUDHA
+
+/user
+add name=UKK-YUDHA group=full
+
 /interface vlan
 add name=VLAN10 vlan-id=10 interface=ether2
 
